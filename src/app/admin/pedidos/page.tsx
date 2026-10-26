@@ -1,0 +1,11 @@
+import { db } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
+import { money, statusLabel } from "@/lib/format";
+import { updateOrder } from "../actions";
+import { AdminForm } from "@/components/admin-form";
+import { ShoppingBag } from "lucide-react";
+export default async function Page() {
+  await requireAdmin();
+  const orders=await db.order.findMany({include:{customer:true,items:{include:{product:true}}},orderBy:{createdAt:"desc"},take:100});
+  return <><div className="admin-page-heading"><div><div className="eyebrow">DEL CARRITO A SUS PATITAS</div><h1>Pedidos</h1><p>{orders.length} pedidos registrados · retiro en local</p></div></div><div className="demo-note">No hay pagos online conectados. Marca un pedido como pagado únicamente cuando el equipo haya verificado el pago por otro medio.</div>{orders.length?<div className="admin-orders">{orders.map(o=><article className="admin-card order-admin-card" key={o.id}><div className="admin-card-heading"><h2>{o.reference}</h2><span className={"badge "+o.status}>{statusLabel[o.status]}</span></div><div className="order-admin-body"><div><h3>{o.customer.name}</h3><p>{o.customer.email} · {o.customer.phone}</p><ul>{o.items.map(i=><li key={i.id}><span>{i.quantity} × {i.product.name}</span><strong>{money(i.price*i.quantity)}</strong></li>)}</ul><div className="order-admin-total">Total <strong>{money(o.total)}</strong></div><p className="field-hint">Modalidad: retiro · Pago: {o.paymentStatus==="PAID"?"Pagado":"Sin pagar"}</p></div>{!["CANCELLED","FULFILLED"].includes(o.status)&&<AdminForm action={updateOrder}><input type="hidden" name="id" value={o.id}/><label className="field">Preparación<select name="status" defaultValue={o.status}>{["PENDING","PREPARING","READY","FULFILLED","CANCELLED"].map(s=><option value={s} key={s}>{statusLabel[s]}</option>)}</select></label><label className="field">Pago<select name="paymentStatus" defaultValue={o.paymentStatus}><option value="UNPAID">Sin pagar</option><option value="PAID">Pago verificado</option></select></label></AdminForm>}</div></article>)}</div>:<div className="empty-state"><ShoppingBag size={35}/><h2>Todo listo para el primer pedido.</h2><p>Los pedidos de la tienda aparecerán aquí.</p></div>}</>;
+}

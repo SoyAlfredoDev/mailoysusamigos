@@ -1,0 +1,34 @@
+{
+  "generator": "image_gen built-in",
+  "note": "Imágenes ilustrativas generadas para la propuesta. Sustituir por catálogo y fotografías autorizadas antes de la venta real.",
+  "assets": [
+    {
+      "file": "public/images/hero.webp",
+      "prompt": "High-end editorial pet photography for a warm contemporary Chilean pet grooming and veterinary website. A beautiful freshly groomed happy white miniature poodle wearing a plain muted turquoise bandana sitting next to a calm grey tabby cat. Both fully visible from chest upwards, friendly natural expressions, lifelike anatomy. Minimal pale mint and warm ivory studio backdrop, soft daylight, subtle foreground cream towel. Landscape 3:2 crop, subjects clustered to center right with breathing space. No text, no logos, no symbols. Photorealistic premium imagery. Not an actual clinic or staff photograph."
+    },
+    {
+      "file": "public/images/grooming.webp",
+      "prompt": "Premium natural editorial photography, closeup happy fluffy small white poodle being gently brushed by groomer's hands, warm cream towel, turquoise apron partially visible in background, no identifiable person's face, soft natural daylight, clean modern grooming studio in muted sage green, cream and warm beige. Landscape crop with dog face centered, professional pet care website, real anatomy, no text or logos."
+    },
+    {
+      "file": "public/images/veterinary.webp",
+      "prompt": "Premium natural editorial photography, caring female veterinary professional in plain muted teal scrubs gently examining friendly golden retriever with a stethoscope in a bright neutral consultation room, warm compassionate expression, professional hygiene, soft natural daylight, pale sage and cream palette. Landscape composition, dog and vet visible, realistic anatomy, no text or logos. Illustrative stock photography, not real business staff."
+    },
+    {
+      "file": "public/images/food.webp",
+      "prompt": "Premium ecommerce product photograph of a freestanding matte warm beige unbranded small dog kibble bag next to a sage ceramic bowl with kibble, isolated on solid warm offwhite #F4F0E8 background, soft studio shadows, tasteful plain paw motif on the bag, no letters no text no logos no watermark, product centered, square crop, contemporary pet shop."
+    },
+    {
+      "file": "public/images/toy.webp",
+      "prompt": "Premium ecommerce product photograph of a single braided turquoise and cream cotton rope dog toy tied into two substantial knots, isolated on solid warm offwhite #F4F0E8 background, soft studio shadows, product centered with space around, no text no labels no logos, square crop, high detail real materials."
+    },
+    {
+      "file": "public/images/shampoo.webp",
+      "prompt": "Premium ecommerce product photograph of a single minimalist amber pet shampoo bottle with black pump, simple cream paper label with small sage paw icon only and NO text, isolated on solid warm offwhite #F4F0E8 background, soft studio shadows, product centered with negative space, no letters no logos no watermark, square crop."
+    },
+    {
+      "file": "public/images/bed.webp",
+      "prompt": "Premium ecommerce product photograph of a round plush sage teal dog bed with a cream fluffy interior, small cream cushion, isolated on solid warm offwhite #F4F0E8 background, realistic soft textile detail and soft studio shadows, product centered, no text no labels no logos, square crop."
+    }
+  ]
+}

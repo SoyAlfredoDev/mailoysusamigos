@@ -1,0 +1,23 @@
+/* Original photographs: no generated detail, recoloring or subject retouching. */
+.hero-image-wrap.hero-milo { aspect-ratio: 1.12; }
+.hero-milo > img { object-position: 55% 67%; }
+.about-image > img { aspect-ratio: 4 / 3; object-fit: contain; border-radius: 20px; }
+.about-image .about-tag { position: static; margin-top: 15px; padding: 0; background: transparent; box-shadow: none; }
+.booking-photo > img { object-position: 55% 65%; }
+.choose-card > img { object-position: 55% 45%; }
+.milo-story-section { padding-bottom: 56px; }
+.milo-story-card { display: grid; gap: 26px; border-radius: 23px; padding: 27px 22px; background: var(--mint); border: 1px solid var(--line); }
+.milo-story-photo { width: 180px; justify-self: center; }
+.milo-story-photo img { width: 100%; height: auto; border-radius: 85px 85px 16px 16px; }
+.milo-story-copy .eyebrow { font-size: 8px; letter-spacing: .1em; margin-bottom: 12px; }
+.milo-story-copy h2 { font-size: 34px; }
+.milo-story-copy p { max-width: 520px; font-size: 13px; line-height: 1.9; margin-top: 16px; }
+.milo-story-copy .text-link { margin-top: 21px; font-size: 12px; min-height: 44px; }
+@media (min-width: 900px) {
+  .milo-story-section { padding-bottom: 75px; }
+  .milo-story-card { grid-template-columns: 210px minmax(0,1fr); align-items: center; gap: 60px; padding: 35px 60px; }
+  .milo-story-photo { width: 210px; }
+  .milo-story-copy h2 { font-size: 40px; }
+  .milo-story-copy .eyebrow { font-size: 9px; }
+  .milo-story-copy p { font-size: 14px; }
+}

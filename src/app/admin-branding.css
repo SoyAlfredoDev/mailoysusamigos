@@ -1,0 +1,93 @@
+/* Same signage tokens as the storefront. Keep operational status colors semantic. */
+.admin-app {
+  --admin-muted: #607985;
+  --admin-vet-bg: #edf2fb;
+  --admin-vet-accent: #5779a4;
+  background: var(--cream);
+}
+.login-page { background: radial-gradient(ellipse at top right, #4ac0d526, transparent 60%), var(--cream); }
+.login-icon { color: var(--brand-strong); }
+.admin-app .admin-topbar { border-top: 3px solid var(--brand); }
+.admin-app .demo-pill { background: var(--mint); border-color: var(--line); color: var(--brand-strong); }
+.admin-app .avatar { background: var(--mint); color: var(--brand-strong); }
+.admin-app .admin-user small,
+.admin-app .admin-desktop-breadcrumb,
+.admin-app .admin-stats p,
+.admin-app .admin-stats small,
+.admin-app .admin-stats a { color: var(--admin-muted); }
+.admin-app .stat-icon:not(.peach):not(.red) { background: var(--mint); color: var(--brand-strong); }
+.admin-app .agenda-filters, .admin-app .agenda-view-switch { background: #e4f1f5; }
+.admin-app .agenda-filters .selected { background: var(--brand-strong); color: white; box-shadow: 0 2px 5px #173f4d0a; }
+.admin-app .agenda-view-switch .selected { color: var(--brand-strong); }
+.admin-app .appointment-list-card.selected { border-color: var(--brand-strong); background: #f2fbfd; }
+.admin-app .appointment-list-card:hover { border-color: #9cc9d5; box-shadow: 0 5px 15px #173f4d07; }
+.admin-app .appointment-list-card > .pet-avatar { background: var(--mint); border-left-color: var(--brand); color: var(--brand-strong); }
+.admin-app .appointment-list-card.vet > .pet-avatar { background: var(--admin-vet-bg); border-left-color: var(--admin-vet-accent); color: #3d5a81; }
+.admin-app .appointment-list-card > .appointment-time,
+.admin-app .appointment-list-card > div > span,
+.admin-app .appointment-list-card > div > small,
+.admin-app .appointment-list-card > svg,
+.admin-app .week-range,
+.admin-app .appointment-inspector dt { color: var(--admin-muted); }
+.admin-app .agenda-list .empty-state { border-color: #aacbd6; }
+.admin-app .appointment-inspector dl > div,
+.admin-app .admin-card-heading,
+.admin-app td,
+.admin-app .stock-alert-list li { border-color: var(--line); }
+.admin-app .admin-card-heading > h2 > svg,
+.admin-app .admin-card-heading > a,
+.admin-app .admin-product summary { color: var(--brand-strong); }
+.admin-app th { background: #eff8fb; color: #526f7e; }
+.admin-app .admin-empty,
+.admin-app .customer-pets small,
+.admin-app .customer-counts,
+.admin-app .settings-list dt,
+.admin-app .service-settings summary > span > small,
+.admin-app .service-settings summary > span:last-child { color: var(--admin-muted); }
+.admin-app .admin-bottom-nav { background: #f8fcfdf5; }
+.admin-app .admin-bottom-nav > a { color: #5b7684; }
+.admin-app .admin-bottom-nav > a.active { color: var(--brand-strong); background: var(--mint); box-shadow: inset 0 3px var(--brand); }
+.admin-app .calendar-head > span { background: var(--mint); }
+.admin-app .calendar-head > span.vet { background: var(--admin-vet-bg); }
+.admin-app .calendar-head > span:first-child,
+.admin-app .calendar-hours > span { color: var(--admin-muted); }
+.admin-app .calendar-lane { background: repeating-linear-gradient(to bottom, transparent 0, transparent 35px, #eaf3f6 35px, #eaf3f6 36px, transparent 36px, transparent 71px, var(--line) 71px, var(--line) 72px); }
+.admin-app .calendar-lunch { background: repeating-linear-gradient(135deg, #e6f0f4aa, #e6f0f4aa 4px, #f7fbfcaa 4px, #f7fbfcaa 8px); color: #6a818c; }
+.admin-app .calendar-event { background: #e1f4f9; border-color: #b9e0ea; border-left-color: var(--brand-strong); }
+.admin-app .calendar-event.vet { background: var(--admin-vet-bg); border-color: #ccd8ed; border-left-color: var(--admin-vet-accent); }
+.admin-app .calendar-event.selected { outline-color: var(--brand-strong); }
+.admin-app .calendar-event small { color: #526e7b; }
+.admin-app .event-paw { background: #ffffffb0; color: var(--brand-strong); }
+
+/* Mobile and tablet controls stay comfortably tappable before the sidebar appears. */
+@media (max-width: 1049px) {
+  .admin-app .admin-content { padding-bottom: calc(95px + env(safe-area-inset-bottom)); }
+  .admin-app .agenda-filters button,
+  .admin-app .agenda-view-switch > a,
+  .admin-app .today-button,
+  .admin-app .admin-page-heading > .button { min-height: 44px; }
+  .admin-app .agenda-date-controls { gap: 5px; }
+  .admin-app .agenda-date-controls > span { min-width: 0; flex: 1; }
+  .admin-app .agenda-date-controls > .icon-button { width: 44px; height: 44px; flex-shrink: 0; }
+  .admin-app .today-button { min-width: 44px; margin-left: 0; }
+  .admin-app .admin-product summary,
+  .admin-app .service-settings summary,
+  .admin-app .reschedule-details summary { min-height: 44px; align-content: center; }
+}
+@media (max-width: 374px) {
+  .admin-app .admin-topbar-right .demo-pill { display: none; }
+}
+@media (min-width: 1050px) {
+  .admin-app .admin-sidebar { background: var(--brand-strong); }
+  .admin-app .admin-brand > svg { color: var(--brand); }
+  .admin-app .admin-brand > span { font-family: var(--font-brand); font-size: 29px; font-weight: 400; letter-spacing: 0; line-height: 1.3; }
+  .admin-app .admin-brand > span > span { font-family: var(--font-sans); font-size: 11px; font-weight: 600; }
+  .admin-app .admin-sidebar-label { color: #d0eef5; }
+  .admin-app .admin-sidebar nav > a { color: #eaf8fb; }
+  .admin-app .admin-sidebar nav > a:hover { background: #ffffff18; }
+  .admin-app .admin-sidebar nav > a.active { background: var(--brand); color: var(--brand-ink); font-weight: 700; }
+  .admin-app .sidebar-active-dot { background: var(--brand-ink); }
+  .admin-app .sidebar-bottom { border-top-color: #ffffff40; }
+  .admin-app .sidebar-store small { color: #d0eef5; }
+  .admin-app .sidebar-bottom > form > button { color: #eaf8fb; }
+}

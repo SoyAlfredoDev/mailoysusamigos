@@ -1,0 +1,127 @@
+/* Motion language: quiet entrances, fast feedback, no animation of document widths. */
+.page-entrance { min-width: 0; }
+.cart-list, .booking-step-stage { position: relative; min-width: 0; }
+.product-add > span { display: flex; align-items: center; justify-content: center; }
+
+.promotion-ribbon {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ffe476;
+  color: #ad1924;
+  border-block: 1px solid #f4d461;
+  margin: 3px 0 25px;
+  isolation: isolate;
+}
+.promotion-link { display: flex; min-width: 0; flex: 1; overflow: hidden; min-height: 35px; align-items: center; }
+.promotion-track { display: flex; width: max-content; animation: promotion-marquee 48s linear infinite; will-change: transform; }
+.promotion-group { display: flex; align-items: center; flex-shrink: 0; gap: 30px; padding-right: 30px; min-width: 100vw; }
+.promotion-message { display: inline-flex; align-items: center; gap: 16px; white-space: nowrap; font-size: 10px; font-weight: 600; letter-spacing: .035em; }
+.promotion-message strong { font-weight: 800; text-transform: uppercase; }
+.promotion-separator { font-size: 13px; }
+.promotion-pause { z-index: 1; width: 44px; min-height: 35px; align-self: stretch; flex-shrink: 0; background: #ffe476; display: flex; align-items: center; justify-content: center; box-shadow: -12px 0 15px #ffe476; border-left: 1px solid #d9b74b55; }
+.promotion-ribbon.is-paused .promotion-track,
+.promotion-link:focus-visible .promotion-track { animation-play-state: paused; }
+@keyframes promotion-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.button, .icon-button, .product-add { transition: transform .22s cubic-bezier(.22,1,.36,1), background-color .22s, border-color .22s, box-shadow .22s; }
+.button:active:not(:disabled), .icon-button:active, .product-add:active:not(:disabled) { transform: scale(.97); }
+.field input, .field textarea, .field select, .search-field { transition: border-color .2s, box-shadow .2s, background-color .2s; }
+.field input:focus, .field textarea:focus, .field select:focus, .search-field:focus-within { border-color: #5a9e8c; box-shadow: 0 0 0 4px #78b6a418; }
+.choice-row button, .date-strip button, .time-grid button, .service-option, .pet-filters button, .category-filters button, .agenda-filters button, .agenda-view-switch a { transition: background-color .2s, border-color .2s, color .2s, box-shadow .2s, transform .2s; }
+.choice-row button:active, .date-strip button:active, .time-grid button:active { transform: scale(.96); }
+.booking-progress li:before, .booking-progress li > span { transition: background-color .25s, border-color .25s, color .25s; }
+.booking-total { transition: background-color .25s; }
+.service-card, .choose-card, .google-review, .admin-card, .appointment-list-card { transition: box-shadow .28s, border-color .28s, transform .28s cubic-bezier(.22,1,.36,1); }
+.service-card img, .choose-card > img, .detail-photo img { transition: transform .65s cubic-bezier(.22,1,.36,1); }
+.text-link svg, .service-card-copy > span > svg, .back-link svg { transition: transform .25s cubic-bezier(.22,1,.36,1); }
+.bottom-nav a > svg, .admin-bottom-nav a > svg { transition: transform .25s, color .25s; }
+.bottom-nav a.active > svg, .admin-bottom-nav a.active > svg { transform: translateY(-2px); }
+.desktop-nav a:after { content: ""; position: absolute; height: 2px; background: var(--teal); left: 0; right: 0; bottom: 6px; transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.desktop-nav a.active:after { transform: scaleX(1); }
+.hero-float { animation: friendly-float 6s ease-in-out infinite; }
+.hero-spark { animation: friendly-turn 12s ease-in-out infinite; }
+.hero-spark.two { animation-delay: -4s; }
+.success-card, .empty-state, .form-error { animation: content-appear .35s cubic-bezier(.22,1,.36,1) both; }
+.success-icon { animation: success-pop .55s cubic-bezier(.22,1,.36,1) both; }
+.faq-list details[open] > p, .admin-product details[open] > form, .service-settings[open] > form { animation: content-appear .25s ease-out both; }
+.agenda-main-area { animation: content-appear .3s ease-out both; }
+.appointment-inspector { animation: inspector-appear .28s cubic-bezier(.22,1,.36,1) both; }
+@keyframes friendly-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes friendly-turn { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(10deg); } }
+@keyframes content-appear { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes inspector-appear { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes success-pop { from { opacity: 0; transform: scale(.8); } to { opacity: 1; transform: scale(1); } }
+
+.reviews-section, .instagram-section { padding-bottom: 60px; }
+.reviews-section .section-heading, .instagram-section .section-heading { flex-wrap: wrap; row-gap: 16px; }
+.reviews-section .section-heading h2, .instagram-section .section-heading h2 { max-width: none; }
+.social-intro { font-size: 12px; margin-top: 13px; line-height: 1.8; max-width: 450px; }
+.reviews-layout { display: grid; gap: 17px; }
+.google-rating-card { background: #e9f2e9; border: 1px solid #dfe8dc; border-radius: 16px; padding: 26px; display: flex; flex-direction: column; align-items: flex-start; }
+.google-maps-attribution { font-size: 16px; font-weight: 400; font-style: normal; letter-spacing: normal; white-space: nowrap; color: #1f1f1f; }
+.social-selection-note { font-size: 10px; color: #75816e; margin: -10px 0 22px; line-height: 1.8; }
+.google-score { font-size: 52px; font-weight: 750; line-height: 1.1; letter-spacing: -.06em; margin: 17px 0 10px; }
+.google-score > span { font-size: 17px; font-weight: 400; color: #788b71; letter-spacing: 0; margin-left: 9px; }
+.review-stars { color: #b97d13; display: flex; gap: 3px; }
+.google-rating-card > p { font-size: 12px; margin-top: 10px; }
+.google-rating-card > a { font-size: 11px; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; text-decoration: underline; text-underline-offset: 4px; }
+.google-rating-card > small { font-size: 9px; color: #708369; margin-top: 17px; line-height: 1.7; }
+.review-cards { display: grid; gap: 17px; min-width: 0; }
+.google-review { padding: 24px; background: var(--white); border: 1px solid var(--line); border-radius: 16px; display: flex; flex-direction: column; }
+.review-top { display: flex; align-items: center; gap: 10px; margin-bottom: 19px; }
+.review-avatar { width: 38px; height: 38px; background: var(--peach); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; flex-shrink: 0; }
+.review-top > div { flex: 1; min-width: 0; }
+.review-top h3 { font-size: 13px; line-height: 1.4; letter-spacing: -.02em; }
+.review-top > div > span { font-size: 10px; color: #7c8874; }
+.review-top > svg { color: #9da991; }
+.google-review blockquote { font-size: 14px; line-height: 1.9; margin: 17px 0 22px; color: #4b6352; flex: 1; }
+.review-footer { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 15px; }
+.review-footer > span { font-size: 9px; color: #7e8a76; }
+.review-footer a { font-size: 10px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+.instagram-swipe-hint { font-size: 10px; color: #74836b; display: flex; gap: 6px; align-items: center; margin: -9px 0 17px; }
+.instagram-grid { display: grid; grid-auto-flow: column; grid-auto-columns: calc(100% - 24px); gap: 15px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #a8c4af transparent; padding-bottom: 12px; }
+.instagram-card { min-width: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: white; scroll-snap-align: start; }
+.instagram-embed { position: relative; background: white; height: 550px; }
+.instagram-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
+.instagram-loading { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 17px; padding: 24px; text-align: center; background: linear-gradient(135deg,#f1f5ed,#fffdf7); }
+.instagram-loading > svg { color: #51846f; }
+.instagram-loading > strong { font-size: 13px; }
+.instagram-loading p { font-size: 11px; line-height: 1.8; }
+.instagram-loading a { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+.instagram-card > a { min-height: 54px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 14px; background: var(--cream); font-size: 10px; }
+.instagram-card > a > span:last-child { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
+.social-source-note { font-size: 10px; color: #798672; line-height: 1.8; margin-top: 18px; }
+@media (min-width: 650px) {
+  .review-cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .google-rating-card { padding: 28px; }
+  .instagram-grid { grid-auto-flow: initial; grid-auto-columns: initial; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: start; overflow: visible; padding-bottom: 0; }
+  .instagram-swipe-hint { display: none; }
+}
+@media (min-width: 1000px) {
+  .promotion-ribbon { margin-bottom: 35px; }
+  .promotion-message { font-size: 11px; }
+  .reviews-section, .instagram-section { padding-bottom: 80px; }
+  .reviews-layout { grid-template-columns: .75fr 2fr; gap: 22px; }
+  .google-review { padding: 27px; }
+  .instagram-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 23px; }
+  .instagram-embed { height: 590px; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .service-card:hover, .choose-card:hover { box-shadow: 0 15px 35px #163c3610; transform: translateY(-5px); }
+  .service-card:hover img, .choose-card:hover > img { transform: scale(1.045); }
+  .detail-photo:hover img { transform: scale(1.025); }
+  .google-review:hover { transform: translateY(-4px); box-shadow: 0 14px 30px #163c3609; }
+  .text-link:hover svg, .service-card:hover .service-card-copy > span > svg { transform: translate(3px,-1px); }
+  .back-link:hover svg { transform: translateX(-3px); }
+  .desktop-nav a:hover:after { transform: scaleX(1); }
+  .appointment-list-card:hover { transform: translateX(3px); border-color: #a6bca0; box-shadow: 0 5px 15px #123e3907; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .promotion-track { animation: none; will-change: auto; transform: none; width: 100%; }
+  .promotion-group { width: 100%; min-width: 0; padding: 9px 18px; }
+  .promotion-group + .promotion-group, .promotion-message + .promotion-message, .promotion-pause { display: none; }
+  .promotion-message { flex-wrap: wrap; white-space: normal; gap: 5px 10px; line-height: 1.6; }
+  .hero-float, .hero-spark, .success-card, .empty-state, .success-icon, .form-error, .appointment-inspector, .agenda-main-area { animation: none; }
+}

@@ -1,0 +1,20 @@
+Láminas estáticas generadas con image_gen para aprobación visual.
+No constituyen una aplicación funcional.
+01-inicio.png: escritorio y móvil.
+02-comprar-y-agendar.png: tienda, peluquería y veterinaria en móvil.
+03-administracion.png: agenda, pedidos y stock en escritorio y móvil.
+
+Fotos, productos, precios, personas, cifras y cupos son ilustrativos.
+La fachada ilustrada en el inicio no representa el local real.
+Los símbolos simplificados de marca de las láminas 02 y 03 son placeholders;
+no implican aprobación de un rediseño del logo.
+En la lámina 02, peluquería reúne opciones de servicio y horario para revisar
+su composición; el indicador de pasos se ajustará en la siguiente iteración.
+En el panel, las posiciones del calendario son orientativas; la siguiente
+iteración debe alinear con exactitud los bloques y los horarios de sus etiquetas.
+La lista móvil también debe corresponder al mismo filtro y conjunto de citas.
+Los textos finales, contraste, tamaños táctiles y responsive se validarán
+en un prototipo tras aprobar esta dirección visual.
+
+Investigación y decisiones: ../investigacion-y-propuesta.txt
+Prompts completos: ../prompts-mockups.json

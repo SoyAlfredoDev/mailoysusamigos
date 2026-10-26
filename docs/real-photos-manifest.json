@@ -1,0 +1,51 @@
+[
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.09 (2).jpeg",
+    "destination": "public/images/real/milo.webp",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 65108
+  },
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.06 (1).jpeg",
+    "destination": "public/images/real/equipo.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 485242
+  },
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.07 (3).jpeg",
+    "destination": "public/images/real/milo-esmoquin.webp",
+    "width": 360,
+    "height": 480,
+    "bytes": 46876
+  },
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.13.jpeg",
+    "destination": "public/images/real/recepcion.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 207306
+  },
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.12 (1).jpeg",
+    "destination": "public/images/real/peluqueria.webp",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 218432
+  },
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.14.jpeg",
+    "destination": "public/images/real/petshop.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 331418
+  },
+  {
+    "source": "public/WhatsApp Image 2026-10-21 at 10.22.13 (1).jpeg",
+    "destination": "public/images/real/consultorio.webp",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 189190
+  }
+]

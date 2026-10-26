@@ -1,0 +1,150 @@
+MILO Y SUS AMIGOS — INVESTIGACIÓN Y PROPUESTA VISUAL
+Fecha: 19 de octubre de 2026
+Etapa: concepto para aprobación. No se inició el desarrollo de la aplicación.
+
+1. MARCA Y EVIDENCIA OBSERVADA
+
+Instagram revisado directamente en navegador:
+https://www.instagram.com/miloysusamigoscl/
+La biografía identifica Peluquería Estética Canina, Veterinaria, Grooming y PetShop.
+Enlaza WhatsApp 56937229564. Destacados visibles: Modelos #Milo, Cirugías,
+Limpieza Dental, Milo Grooming, Padres felices, Precios, Tortas Milo y PetShop.
+En la grilla pública observada aparecen mascotas frente a un muro verde con
+el letrero de la marca, contenido del local y publicaciones estacionales.
+Lectura de marca: cercanía, mascotas protagonistas y resultados de peluquería.
+Se revisó la superficie pública; no se auditaron todas las historias ni publicaciones.
+Los procedimientos clínicos concretos y su disponibilidad se validarán con el cliente.
+
+Logo aportado: caniche blanco, círculo turquesa, huellas oscuras y letras manuscritas.
+Fortaleza: reconocible, afectivo, vinculado a grooming.
+Limitación: archivo de 150 × 150 px, muchos detalles y textos pequeños.
+Propuesta: conservarlo en esta etapa; solicitar original vectorial o de mayor resolución
+antes de producción. No ampliar este JPG como pieza principal.
+No se propone cambiar el logo sin aprobación.
+
+Un directorio externo sitúa el negocio en Mario Alvo Hassan 1489, Santiago.
+Fuente: https://peluqueriacaninachile.cl/catalogo/santiago/peluquero-de-mascotas/veterinaria-y-peluqueria-canina-milo-y-sus-amigos-spa-9502/
+Esa misma ficha muestra horarios contradictorios entre descripción y tabla.
+Dirección y horarios quedan pendientes de confirmación; no se asumen oficiales.
+No trasladar sus cifras de reseñas al diseño sin comprobar la fuente original.
+
+2. REFERENTES CHILENOS
+
+Animalville — https://animalville.cl/
+Observación: tienda con categorías, mensajes de despacho/retiro y acceso a peluquería.
+Aplicación: separar navegación comercial y reserva; explicar retiro y despacho junto
+a la compra. Las condiciones de ese negocio no corresponden a Milo.
+
+Patiperros PET — https://patiperrospet.cl/
+Observación: llamados visibles a agendar y ver tarifas; explica servicios según peso
+y tipo de pelo, además de ubicación.
+Aplicación: pedir tamaño/peso y pelaje para peluquería; mostrar qué incluye el servicio.
+
+Mundo Masco Shop — https://agendapro.com/site/cl/mundomascoshop/567918
+Observación en resultado indexado: grupos de peluquería y veterinario, duración,
+precio y botón de agendar; condiciones de cambios/cancelación.
+La apertura directa no estuvo disponible. No se verificó el flujo completo.
+Aplicación: servicio, duración y condiciones antes de confirmar.
+
+Bable Pet — https://bablepet.cl/
+Observación: propuesta de veterinaria, peluquería y tienda en un mismo lugar;
+WhatsApp y agenda online; explica el equipo y la experiencia de atención.
+Aplicación: hacer del concepto tres servicios en una ubicación una ventaja clara.
+No atribuir a Milo las certificaciones, técnicas o prestaciones del referente.
+
+Vet Chile — https://vet-chile.cl/
+Observación: servicios y valores visibles, separación entre atención y compra,
+ubicación y aclaración de que una solicitud requiere confirmación.
+Aplicación: diferenciar solicitud pendiente y cita confirmada.
+La propuesta para Milo es una agenda propia con cupos por recurso; la integración
+con WhatsApp debe acompañar el flujo, no sustituir el registro administrativo.
+
+Estas observaciones son patrones de interfaz. No se dispone de analítica para
+afirmar que los referentes convierten mejor o atribuirles resultados comerciales.
+
+3. DIRECCIÓN VISUAL PROPUESTA — AMISTAD Y CUIDADO
+
+Turquesa de referencia #10ACB5: identidad y acentos; aproximación visual del logo.
+Verde profundo #163C36: titulares, navegación y botones principales.
+Crema #FAF8F1: fondo cálido, limpio.
+Menta #E9F5EF: agrupaciones y fondos suaves.
+Durazno #F7E1CE: acento de veterinaria y estados secundarios.
+No comunicar estados únicamente con color. Revisar contraste antes de implementar;
+preferir texto verde oscuro sobre turquesa claro y reservar blanco para fondos oscuros.
+
+Tipografía: sans redondeada contemporánea para titulares, sans muy legible para
+formularios y tablas. Propuesta inicial: Manrope y una fuente de sistema de respaldo.
+Jerarquía clara, bordes suaves, iconos sencillos y pocas huellas decorativas.
+Fotografías finales: local, equipo y mascotas del cliente con permiso de uso.
+Las fotos generadas en los mockups son ilustrativas, no evidencia del establecimiento.
+No se inventan testimonios, descuentos, certificaciones o cifras de reputación.
+
+4. ARQUITECTURA PÚBLICA Y CONVERSIÓN
+
+Inicio: propuesta breve + tres accesos visibles: Comprar productos,
+Agendar peluquería, Agendar veterinaria. Sin carrusel automático.
+Luego servicios, selección de productos, resultados de grooming, equipo,
+reseñas verificadas cuando existan y ubicación con cómo llegar.
+
+Tienda: búsqueda, perro/gato, categorías, filtros, stock, variantes,
+precio CLP, carrito y checkout como invitado.
+Compra: producto → carrito → retiro/despacho habilitado → datos → pago → resultado.
+Mostrar costo total y disponibilidad antes de pagar. Proveedor de pago por definir.
+No prometer envío gratis ni retiro inmediato sin validar la operación.
+
+Peluquería: servicio → tamaño/peso y pelaje → horario → mascota/tutor → resumen
+y condiciones → confirmación. Solicitar información adicional solo si es necesaria.
+El valor y la duración dependen de reglas del negocio que debe aprobar el cliente.
+
+Veterinaria: tipo de atención → profesional/horario → mascota y tutor →
+motivo breve → resumen → confirmación. Procedimientos que requieren evaluación
+pueden generar solicitudes pendientes en lugar de reserva automática.
+No presentar disponibilidad de urgencias sin confirmación del cliente.
+
+Reservas: final visible con código, estado, fecha, servicio y cómo reprogramar.
+Una cita solo aparece confirmada al guardarse y asegurar el cupo.
+Si el negocio prefiere validación manual, indicar claramente Pendiente.
+No obligar a crear cuenta para la primera compra o reserva.
+
+Mobile first: diseño base 360–390 px, acciones de al menos 44–48 px,
+formularios de una columna, labels persistentes, teclado apropiado, filtros compactos
+y navegación inferior sin tapar botones. El calendario administrativo se convierte
+en lista por hora en móvil. Respetar preferencias de movimiento reducido.
+Motion: transiciones breves y funcionales, sin bloquear lectura ni acciones.
+
+5. PANEL ADMINISTRATIVO PROPUESTO
+
+Resumen de citas, pedidos pendientes y alertas de stock.
+Agenda única, con filtros de peluquería/veterinaria y vistas día/semana.
+Disponibilidad separada por profesional y recurso; considerar duración, pausas
+y bloqueos para evitar solapamientos.
+Estados de citas: pendiente, confirmada, llegó, en atención, completada, cancelada,
+no asistió. Diferenciar estado de cita de estado de pago.
+Pedidos: pendiente de pago, pagado, preparando, listo para retiro/enviado, completado.
+Catálogo: productos, variantes, imágenes, stock y precios.
+Servicios: precios, duración, profesionales y horarios.
+Clientes y mascotas: datos de contacto, mascotas y reservas vinculadas.
+Equipo/permisos: administrador, recepción y profesionales según necesidad.
+Separar permisos sobre datos clínicos; no asumir una ficha clínica completa
+dentro del alcance inicial.
+Configuración: horarios, cierres, políticas, retiro/despacho y notificaciones.
+El panel unifica operaciones; no se mezcla su navegación con la tienda pública.
+
+6. IMPLEMENTACIÓN POSTERIOR A LA APROBACIÓN
+
+Stack solicitado: Next.js, Motion, Prisma, Tailwind CSS y Vercel.
+Base de datos, pagos, mensajes y autenticación quedan por definir.
+Diseño modular con tienda, reservas y administración compartiendo datos coherentes.
+Antes de desarrollar: aprobar dirección visual y flujos; confirmar servicios,
+precios, duración, equipo, horarios, dirección, políticas, productos y logística.
+Después: definir modelo de datos y permisos, construir y verificar flujos reales.
+No se crearon infraestructura, cobros, credenciales ni una aplicación funcional.
+
+7. ENTREGABLES VISUALES
+
+01-inicio: inicio escritorio y adaptación móvil.
+02-comprar-y-agendar: tienda y reservas de peluquería/veterinaria en móvil.
+03-administracion: agenda operativa en escritorio y móvil.
+Todos son mockups estáticos para revisar composición y jerarquía.
+Precios, productos, nombres, disponibilidad y cifras administrativas son de ejemplo.
+Los prompts completos usados se guardan en prompts-mockups.json.

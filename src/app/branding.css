@@ -1,0 +1,68 @@
+/* Signage palette. Keep layout, photography and semantic status colors intact. */
+body p { color: #586e79; }
+h1 > span, h2 > span, .hero h1 > span { color: var(--brand-strong); }
+.eyebrow, .about-tag svg, .care-strip svg, .about-checks svg { color: var(--brand-strong); }
+.topbar { background: var(--brand); color: var(--brand-ink); }
+.site-header { border-bottom-color: var(--line); }
+.desktop-nav a { color: #526b78; }
+.desktop-nav a.active, .desktop-nav a:hover { color: var(--brand-strong); }
+.button.dark { background: var(--brand-strong); color: white; }
+.button.dark:hover, .product-add:hover { background: #066780; }
+.button.turquoise { background: var(--brand); color: var(--brand-ink); }
+.button.turquoise:hover { background: #72d0e0; }
+.button.outline { border-color: #9cc9d5; color: var(--brand-strong); }
+.text-link { border-bottom-color: #a5cbd6; }
+.cart-count { color: var(--brand-ink); }
+.hero-doodle, .hero-spark.two, .float-heart { color: var(--brand); }
+.hero-float > div > span, .hero-footnote { color: #607c88; }
+.sand { background: #edf6fa; }
+.care-strip span, .back-link, .footer-grid > div:not(:first-child) > a { color: #5d7683; }
+.closing-cta { background: var(--brand); color: var(--brand-ink); }
+.closing-cta .button.cream { background: white; color: var(--brand-strong); }
+.site-footer { background: #eaf5f8; }
+.footer-bottom { border-top-color: var(--line); color: #637d89; }
+.bottom-nav { background: #f8fcfdf5; border-color: var(--line); }
+.bottom-nav a.active { color: var(--brand-strong); }
+.google-rating-card { background: var(--mint); border-color: var(--line); }
+.google-review blockquote { color: #496774; }
+.instagram-loading { background: linear-gradient(135deg, #eaf7fa, #fff); }
+.instagram-loading > svg { color: var(--brand-strong); }
+.instagram-grid { scrollbar-color: #9bcbd8 transparent; }
+.location-photo-note, .location-address > div > span, .lightbox-footer span { color: #637b87; }
+.location-map-card > iframe, .location-lightbox-image { background: #e8f3f6; }
+.location-lightbox::backdrop { background: #12333ed6; }
+.service-option.selected, .choice-row > button.selected,
+.date-strip > button.selected, .time-grid > button.selected,
+.pet-filters button.selected, .category-filters button.selected {
+  background: #def3f8;
+  border-color: var(--brand-strong);
+  color: var(--brand-ink);
+}
+.field input:focus, .field textarea:focus, .field select:focus, .search-field:focus-within {
+  border-color: var(--brand-strong);
+  box-shadow: 0 0 0 4px #4ac0d51f;
+}
+.field input, .field select, .field textarea { background: white; border-color: var(--line); }
+.service-option em, .booking-progress li.current { color: var(--brand-strong); }
+.booking-progress li.current > span { background: var(--brand-strong); border-color: var(--brand-strong); }
+.selected .radio-dot { border-color: var(--brand-strong); }
+
+/* Handwritten accents inspired by the storefront. Interface text stays Manrope. */
+.brand > span {
+  font-family: var(--font-brand);
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25;
+  color: var(--brand-strong);
+}
+.brand > span > span { font-family: var(--font-sans); color: var(--brand-ink); }
+.hero h1 > span, .milo-story-copy h2 > span, .home-video-heading h2 > span {
+  font-family: var(--font-brand);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+@media (min-width: 900px) {
+  .brand > span { font-size: 31px; }
+}

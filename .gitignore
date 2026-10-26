@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.env
+.env.local
+.env.*
+!.env.example
+prisma/*.db*
+src/generated/
+*.tsbuildinfo
+test-results/
+.DS_Store
+.codebase-memory/
+outputs/
+# The app serves the optimized copy in public/videos/ (original exceeds GitHub's file limit).
+public/WhatsApp Image 2026-10-21 at 10.22.08 (3).mp4
