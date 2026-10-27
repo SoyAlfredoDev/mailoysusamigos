@@ -46,11 +46,11 @@ El seed usa direcciones `.test`; las pruebas manuales también usan exclusivamen
 
 ## Datos y despliegue
 
-Prisma usa SQLite/libSQL: archivo local para desarrollo y conexión libSQL remota persistente para un futuro despliegue en Vercel. No usar SQLite en el sistema de archivos efímero de Vercel.
+Prisma usa SQLite/libSQL: archivo local para desarrollo y conexión libSQL remota persistente para el despliegue en Vercel. No usar SQLite en el sistema de archivos efímero de Vercel.
 
-Variables: consultar `.env.example`. Para una base remota, configurar `DATABASE_URL=libsql://...`, `DATABASE_AUTH_TOKEN`, un `SESSION_SECRET` aleatorio de al menos 32 caracteres, correo y contraseña del administrador. El cliente Prisma utiliza el adaptador libSQL. La aplicación no ha sido desplegada.
+Variables: consultar `.env.example`. Para una base remota, configurar `DATABASE_URL=libsql://...`, `DATABASE_AUTH_TOKEN`, un `SESSION_SECRET` aleatorio de al menos 32 caracteres, correo y contraseña del administrador. La integración Turso de Vercel configura `TURSO_DATABASE_URL` y `TURSO_AUTH_TOKEN`, que el adaptador también reconoce. No definir `DATABASE_URL=file:...` en Vercel: tiene prioridad sobre la URL de Turso y se rechaza para evitar usar almacenamiento efímero.
 
-Para inicializar una base remota vacía, exportar el esquema con Prisma y aplicar el SQL con el cliente oficial libSQL de esa base. Revisar el SQL y ejecutar una sola vez mediante una migración controlada. `prisma db push` del setup está destinado al SQLite local; no asumir que ejecuta migraciones en un endpoint libSQL remoto. No ejecutar el seed de demostración en producción.
+Para inicializar una base remota vacía, aplicar una sola vez `prisma/migrations/20261026_initial/migration.sql` desde la consola SQL de Turso o el cliente oficial libSQL. Este archivo contiene la estructura inicial, sin datos de demostración; su ejecución manual no registra historial de Prisma Migrate. Revisar el SQL y ejecutar una sola vez mediante una migración controlada. `prisma db push` del setup está destinado al SQLite local; no asumir que ejecuta migraciones en un endpoint libSQL remoto. No ejecutar el seed de demostración en producción.
 
 Antes de habilitar la operación comercial, confirmar catálogo, precios, equipo, agenda y condiciones; conectar pagos y avisos; configurar la base remota y credenciales; añadir protección antiabuso para formularios públicos y verificar el entorno desplegado. La web conserva noindex durante esta etapa.
 

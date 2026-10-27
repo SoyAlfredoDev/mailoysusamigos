@@ -1,9 +1,9 @@
 import "dotenv/config";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { PrismaLibSql } from "@prisma/adapter-libsql";
-import { databaseUrl } from "../src/lib/database-url";
+import { databaseUrl, databaseAuthToken } from "../src/lib/database-url";
 import { addDays, today, startAt, slotStarts } from "../src/lib/schedule";
-const db = new PrismaClient({ adapter: new PrismaLibSql({ url: databaseUrl(), authToken: process.env.DATABASE_AUTH_TOKEN || undefined }) });
+const db = new PrismaClient({ adapter: new PrismaLibSql({ url: databaseUrl(), authToken: databaseAuthToken() }) });
 const products = [
   { id: "alimento-adulto", name: "Alimento para perro adulto", description: "Nutrición para acompañar sus aventuras de cada día. Producto de demostración; la marca y composición se definirán con el catálogo real.", category: "FOOD", pet: "DOG", detail: "Bolsa de 3 kg", price: 18990, stock: 18, image: "/images/food.webp", featured: true },
   { id: "mordedor", name: "Mordedor de algodón", description: "Una nueva excusa para jugar juntos. Cuerda de algodón con nudos; supervisa siempre el juego de tu mascota.", category: "ACCESSORIES", pet: "BOTH", detail: "Tamaño mediano", price: 5990, stock: 24, image: "/images/toy.webp", featured: true },
