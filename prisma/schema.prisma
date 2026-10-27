@@ -44,9 +44,13 @@ model Resource {
 model Customer {
   id           String @id @default(cuid())
   name         String
+  lastName     String @default("")
   email        String @unique
   phone        String
+  authUserId   String? @unique
+  authUser     User? @relation(fields: [authUserId], references: [id], onDelete: SetNull)
   pets         Pet[]
+  guardianships PetGuardian[]
   appointments Appointment[]
   orders       Order[]
 }
@@ -54,12 +58,108 @@ model Customer {
 model Pet {
   id           String @id @default(cuid())
   name         String
+  code         String @unique
   species      String
   size         String?
   coat         String?
   customerId   String
   customer     Customer @relation(fields: [customerId], references: [id])
   appointments Appointment[]
+  guardians    PetGuardian[]
+  invitations  PetInvitation[]
+}
+
+model PetGuardian {
+  petId      String
+  customerId String
+  pet        Pet @relation(fields: [petId], references: [id], onDelete: Cascade)
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  source     String @default("ADMIN")
+  createdAt  DateTime @default(now())
+  @@id([petId, customerId])
+  @@index([customerId])
+}
+
+model PetInvitation {
+  id             String @id @default(cuid())
+  petId          String
+  pet            Pet @relation(fields: [petId], references: [id], onDelete: Cascade)
+  inviterId      String
+  inviter        User @relation("SentPetInvitations", fields: [inviterId], references: [id], onDelete: Cascade)
+  email          String
+  tokenHash      String @unique
+  expiresAt      DateTime
+  acceptedAt     DateTime?
+  acceptedById   String?
+  revokedAt      DateTime?
+  createdAt      DateTime @default(now())
+  @@index([petId, email])
+}
+
+model User {
+  id            String @id @default(cuid())
+  name          String
+  lastName      String
+  phone         String
+  email         String @unique
+  emailVerified Boolean @default(false)
+  image         String?
+  active        Boolean @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+  customer      Customer?
+  invitations   PetInvitation[] @relation("SentPetInvitations")
+}
+
+model Session {
+  id        String @id @default(cuid())
+  expiresAt DateTime
+  token     String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+}
+
+model Account {
+  id                     String @id @default(cuid())
+  accountId              String
+  providerId             String
+  userId                 String
+  user                   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken            String?
+  refreshToken           String?
+  idToken                String?
+  accessTokenExpiresAt   DateTime?
+  refreshTokenExpiresAt  DateTime?
+  scope                  String?
+  password               String?
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  @@unique([providerId, accountId])
+  @@index([userId])
+}
+
+model Verification {
+  id         String @id @default(cuid())
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  @@index([identifier])
+}
+
+model RateLimit {
+  id          String @id @default(cuid())
+  key         String @unique
+  count       Int
+  lastRequest BigInt
 }
 
 model Appointment {
@@ -82,6 +182,12 @@ model Appointment {
   pet        Pet @relation(fields: [petId], references: [id])
   createdAt  DateTime @default(now())
   slots      Slot[]
+  idempotencyKey String? @unique
+  requestHash    String?
+  contactName    String?
+  contactEmail   String?
+  contactPhone   String?
+  notices        AppointmentNotice[]
   @@index([date, resourceId])
 }
 
@@ -121,4 +227,24 @@ model LoginAttempt {
   key       String @id
   count     Int @default(0)
   resetAt   DateTime
+}
+
+model AppointmentNotice {
+  id            String @id @default(cuid())
+  appointmentId String
+  appointment   Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  audience      String
+  to            String
+  subject       String
+  text          String
+  status        String @default("PENDING")
+  attempts      Int @default(0)
+  nextAttemptAt DateTime @default(now())
+  lockedUntil   DateTime?
+  sentAt        DateTime?
+  providerId    String?
+  lastError     String?
+  createdAt     DateTime @default(now())
+  @@index([status, nextAttemptAt])
+  @@index([appointmentId])
 }

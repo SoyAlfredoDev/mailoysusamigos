@@ -13,6 +13,8 @@ import "./motion.css";
 import "./real-photos.css";
 import "./branding.css";
 import "./admin-branding.css";
+import "./public-experience.css";
+import "./customer-accounts.css";
 export const metadata: Metadata = {
   title: { default: "Milo y sus amigos · Peluquería, veterinaria y petshop", template: "%s · Milo y sus amigos" },
   description: "Cuidado, salud y todo para tu mascota en un mismo lugar. Conoce nuestra peluquería canina, agenda una atención veterinaria y explora el petshop.",

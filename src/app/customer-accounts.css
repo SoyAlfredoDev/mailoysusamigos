@@ -1,0 +1,54 @@
+.account-experience { min-height: 100svh; background: radial-gradient(ellipse at 90% 5%,#d5f0ef,transparent 50%),radial-gradient(ellipse at 0% 95%,#f8eedd,transparent 50%),#fffdf9; }
+.customer-auth-page { width: min(100% - 36px, 490px); margin: auto; padding: 32px 0; display: grid; justify-items: center; gap: 24px; }
+.customer-auth-card { width: 100%; padding: 26px 22px; border: 1px solid #fff; border-radius: 28px; background: #fffffff0; box-shadow: 0 20px 65px #173f4d0b; }
+.customer-auth-card h1 { font-size: clamp(29px,7vw,38px); }
+.customer-auth-card .eyebrow { font-size: 8px; margin-top: 20px; }
+.account-symbol { width: 54px; height: 54px; display: grid; place-items: center; background: #e1f4f3; border-radius: 18px; color: #087c97; }
+.account-intro { font-size: 13px; line-height: 1.8; margin: 16px 0 24px; }
+.account-fields { display: grid; gap: 17px; margin: 0 0 20px; }
+.account-fields .field { margin: 0; }
+.account-fields input { font-size: 16px; }
+.account-name-grid { display: grid; gap: 17px; }
+.password-field { position: relative; display: flex; }
+.password-field input { width: 100%; padding-right: 50px; }
+.password-field button { position: absolute; right: 2px; top: 2px; height: calc(100% - 4px); min-width: 44px; display: grid; place-items: center; }
+.account-fields .field small { color: #586e79; font-size: 11px; }
+.account-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 18px; margin-top: 17px; }
+.account-links a,.account-links button,.account-home { min-height: 44px; display: inline-flex; align-items: center; color: #08738a; font-size: 12px; }
+.account-feedback { display: grid; gap: 18px; padding: 18px; border: 1px solid #b6dcd7; background: #eff9f5; border-radius: 18px; }
+.account-feedback p { font-size: 13px; }
+.welcome-card { padding-block: 36px; }
+.account-admin-create { display: grid; gap: 14px; margin-bottom: 26px; }
+.account-admin-create details { padding: 0; overflow: hidden; }
+.account-admin-create summary { cursor: pointer; padding: 18px; display: flex; align-items: center; gap: 10px; font-weight: 700; min-height: 58px; }
+.account-admin-create form { padding: 0 18px 20px; }
+.account-admin-create form>fieldset { margin: 0; }
+.account-admin-create .field { margin-bottom: 15px; }
+.account-admin-create input,.account-admin-create select { font-size: 16px; }
+.account-list-title { font-size: 23px; margin: 28px 0 18px; }
+.account-status { display: inline-block; font-size: 10px; padding: 5px 9px; background: #e5f3f4; border-radius: 8px; margin: 7px 0; }
+.account-admin-actions { display: flex; flex-wrap: wrap; gap: 7px 15px; border-top: 1px solid var(--line); margin-top: 15px; padding-top: 10px; }
+.account-admin-actions .text-link { min-height: 44px; font-size: 11px; }
+.account-admin-actions p { width: 100%; font-size: 11px; }
+.customer-card .text-link { font-size: 11px; min-height: 44px; }
+.customer-card .field-hint { overflow-wrap: anywhere; }
+@media(min-width:600px) { .customer-auth-page { padding-block: 50px; } .customer-auth-card { padding: 35px; } .account-name-grid { grid-template-columns: 1fr 1fr; } .account-admin-create { grid-template-columns: 1fr 1fr; align-items: start; } }
+.booking-fields { border: 0; padding: 0; margin: 0; min-width: 0; }
+.booking-account-note { padding: 14px 16px; border-radius: 12px; background: #edf8f7; font-size: 12px; line-height: 1.7; margin-bottom: 20px; }
+.booking-account-note a { color: #08738a; text-decoration: underline; text-underline-offset: 3px; }
+.booking-fields input[readonly] { background: #f4f8f8; color: #36535b; }
+.appointment-email-status { padding: 14px 0; margin-top: 12px; border-top: 1px solid var(--line); font-size: 11px; }
+.appointment-email-status ul { padding-left: 16px; margin: 10px 0; }
+.appointment-email-status li { margin-block: 7px; overflow-wrap: anywhere; }
+.appointment-email-status small { display: block; color: #657980; line-height: 1.5; }
+@media(min-width:1050px) { .calendar-body { height: 656px; } }
+@media(min-width:1050px) {
+  .calendar-event[data-short="true"] { padding: 2px 5px; line-height: 1.25; }
+  .calendar-event[data-short="true"] .event-paw, .calendar-event[data-short="true"] small:last-child { display: none; }
+  .calendar-event[data-short="true"] strong { font-size: 9px; }
+  .calendar-event[data-short="true"] small { font-size: 8px; }
+}
+.booking-step-stage { scroll-margin-top: 24px; }
+.booking-step-stage:focus { outline: none; }
+.appointment-email-status>.text-link { display: block; min-height: 44px; margin-top: 6px; color: #08738a; }
+.appointment-email-status>p { margin-bottom: 10px; line-height: 1.6; }
