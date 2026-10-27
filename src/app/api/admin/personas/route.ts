@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { adminSession } from "@/lib/auth";
+import { adminConfigured, adminSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { createManagedUser, createManagedPet, consumeCustomerLimit, CustomerError } from "@/lib/customer-core";
 import { customerBaseURL, getCustomerAuth } from "@/lib/customer-auth";
@@ -7,6 +7,7 @@ import { hasSameOrigin } from "@/lib/request-origin";
 import { revalidatePath } from "next/cache";
 export async function POST(request: Request) {
   if (!hasSameOrigin(request)) return Response.json({ error: "Solicitud no permitida." }, { status: 403 });
+  if (!adminConfigured()) return Response.json({ error: "El acceso del equipo todavía no está configurado." }, { status: 401 });
   const session = await adminSession();
   if (!process.env.ADMIN_EMAIL || !session.admin || session.email !== process.env.ADMIN_EMAIL) return Response.json({ error: "Acceso no autorizado." }, { status: 401 });
   try {
